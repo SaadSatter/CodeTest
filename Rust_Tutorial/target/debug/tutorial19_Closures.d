@@ -1,0 +1,1 @@
+C:\Users\ssatter\OneDrive\ -\ Qualcomm\Documents\Code\ Test\Rust_Tutorial\target\debug\tutorial19_Closures.exe: C:\Users\ssatter\OneDrive\ -\ Qualcomm\Documents\Code\ Test\Rust_Tutorial\tutorial19_Closures\src\main.rs

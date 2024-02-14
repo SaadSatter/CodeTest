@@ -1,0 +1,34 @@
+[workspace]
+members = [
+    "tutorial1",
+    "tutorial3_data_types",
+    "tutorial4_console_input",
+    "tutorial5_arithmetic",
+    "tutorial6_conditionals",
+    "tutorial7_functions",
+    "tutorial8_Memory",
+    "tutorial9_loops",
+    "tutorial10_ownership",
+    "tutorial11_Structs",
+    "tutorial12_Enum_pattern_match",
+    "tutorial13_Modules",
+    "tutorial14_vector_string_hashmap",
+    "tutorial15_Error",
+    "tutorial16_GenericTypes",
+    "tutorial17_Traits",
+    "tutorial18_Lifetimes",
+    "tutorial19_Closures",
+    "tutorial20_Iterators",
+    "tutorial22_Box_Pointers",
+    "tutorial23_Deref_Trait",
+    "tutorial24_Drop_Trait",
+    "tutorial25_Reference_Counting",
+    "tutorial26_Interior_Mutability", 
+    "tutorial27_Reference_Cycles",
+    "tutorial28_Creating_Threads",
+    "tutorial29_Message_Passing",
+    "tutorial30_Sharing_State"
+
+]
+
+workspace.resolver = "1"

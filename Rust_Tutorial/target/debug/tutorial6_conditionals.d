@@ -1,0 +1,1 @@
+C:\Users\ssatter\OneDrive\ -\ Qualcomm\Documents\Code\ Test\Rust_Tutorial\target\debug\tutorial6_conditionals.exe: C:\Users\ssatter\OneDrive\ -\ Qualcomm\Documents\Code\ Test\Rust_Tutorial\tutorial6_conditionals\src\main.rs

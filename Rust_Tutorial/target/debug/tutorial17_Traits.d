@@ -1,0 +1,1 @@
+C:\Users\ssatter\OneDrive\ -\ Qualcomm\Documents\Code\ Test\Rust_Tutorial\target\debug\tutorial17_Traits.exe: C:\Users\ssatter\OneDrive\ -\ Qualcomm\Documents\Code\ Test\Rust_Tutorial\tutorial17_Traits\src\main.rs

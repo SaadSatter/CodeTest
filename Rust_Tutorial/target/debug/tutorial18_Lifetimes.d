@@ -1,0 +1,1 @@
+C:\Users\ssatter\OneDrive\ -\ Qualcomm\Documents\Code\ Test\Rust_Tutorial\target\debug\tutorial18_Lifetimes.exe: C:\Users\ssatter\OneDrive\ -\ Qualcomm\Documents\Code\ Test\Rust_Tutorial\tutorial18_Lifetimes\src\main.rs

@@ -1,0 +1,1 @@
+C:\Users\ssatter\OneDrive\ -\ Qualcomm\Documents\Code\ Test\Rust_Tutorial\target\debug\tutorial8_Memory.exe: C:\Users\ssatter\OneDrive\ -\ Qualcomm\Documents\Code\ Test\Rust_Tutorial\tutorial8_Memory\src\main.rs

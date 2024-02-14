@@ -1,0 +1,163 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <string.h>	
+#include <sys/stat.h>
+#include <dirent.h>
+#include <sys/types.h>
+using namespace std;
+#include <functional>
+#include <unordered_map>
+
+int longestSubstring(string s, int k) {
+    int n = s.length();
+    if (n == 0 || n < k){
+        return 0;
+    }
+    if ( k <= 1){
+        return n;
+    }
+
+    unordered_map<char, int> mp;
+    for(char c: s){
+        mp[c] +=1;
+    }
+
+    int l = 0;
+    while (l < n && mp[s[l]] >= k){
+        l++;
+    }
+
+    if (l >= n){
+        return l;
+    }
+
+    int ls1 = longestSubstring(s.substr(0,l),k);
+
+    while( l < n && mp[s[l]] < k){
+        l++;
+    }
+    if (l >= n){
+        int ls2 = 0;
+    }
+    int ls2 = longestSubstring(s.substr(l),k);
+
+    return max(ls1, ls2);
+
+    
+}
+
+int longestSubstringSliding(string s, int k)
+{
+    // Store the required answer
+    int ans = 0;
+ 
+    // Create a frequency map of the
+    // characters of the string
+    int freq[26] = { 0 };
+ 
+    // Store the length of the string
+    int n = s.size();
+ 
+    // Traverse the string, s
+    for (int i = 0; i < n; i++)
+ 
+        // Increment the frequency of
+        // the current character by 1
+        freq[s[i] - 'a']++;
+ 
+    // Stores count of unique characters
+    int unique = 0;
+ 
+    // Find the number of unique
+    // characters in string
+    for (int i = 0; i < 26; i++)
+        if (freq[i] != 0)
+            unique++;
+ 
+    // Iterate in range [1, unique]
+    for (int curr_unique = 1;
+         curr_unique <= unique;
+         curr_unique++) {
+ 
+        // Initialize frequency of all
+        // characters as 0
+        memset(freq, 0, sizeof(freq));
+ 
+        // Stores the start and the
+        // end of the window
+        int start = 0, end = 0;
+ 
+        // Stores the current number of
+        // unique characters and characters
+        // occurring atleast K times
+        int cnt = 0, count_k = 0;
+ 
+        while (end < n) {
+            if (cnt <= curr_unique) {
+                int ind = s[end] - 'a';
+ 
+                // New unique character
+                if (freq[ind] == 0)
+                    cnt++;
+ 
+                freq[ind]++;
+ 
+                // New character which
+                // occurs atleast k times
+                if (freq[ind] == k)
+                    count_k++;
+ 
+                // Expand window by
+                // incrementing end by 1
+                end++;
+            }
+            else {
+                int ind = s[start] - 'a';
+ 
+                // Check if this character
+                // is present atleast k times
+                if (freq[ind] == k)
+                    count_k--;
+ 
+                freq[ind]--;
+ 
+                // Check if this character
+                // is unique
+                if (freq[ind] == 0)
+                    cnt--;
+ 
+                // Shrink the window by
+                // incrementing start by 1
+                start++;
+            }
+ 
+            // If there are curr_unique
+            // characters and each character
+            // is atleast k times
+            if (cnt == curr_unique
+                && count_k == curr_unique)
+ 
+                // Update the overall
+                // maximum length
+                ans = max(ans, end - start);
+        }
+    }
+ 
+    // return the answer
+    return ans;
+}
+
+int main(){
+    string s = "aaabcb";
+    int k = 3;
+
+    cout << longestSubstring(s,k) << endl;
+
+    s = "ababacb";
+    cout << longestSubstring(s,k) << endl;
+
+    s = "aaacacpfcpppdddd";
+    cout << longestSubstringSliding(s,k) << endl;
+}
